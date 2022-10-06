@@ -360,6 +360,7 @@ public class OpenFilePlugin implements MethodCallHandler
         }
     }
 
+/*
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void openApkFile() {
         if (!canInstallApk()) {
@@ -391,7 +392,7 @@ public class OpenFilePlugin implements MethodCallHandler
         Intent intent = new Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES, packageURI);
         activity.startActivityForResult(intent, RESULT_CODE);
     }
-
+*/
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public boolean onRequestPermissionsResult(int requestCode, String[] strings, int[] grantResults) {
@@ -411,6 +412,7 @@ public class OpenFilePlugin implements MethodCallHandler
         return true;
     }
 
+/*
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public boolean onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -423,6 +425,7 @@ public class OpenFilePlugin implements MethodCallHandler
         }
         return false;
     }
+    */
 
     private void result(int type, String message) {
         if (result != null && !isResultSubmitted) {
